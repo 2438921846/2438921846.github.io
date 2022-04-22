@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=gb2312">
   <style>
-    body{margin:0;padding:0;overflow: hidden;}
+    body{margin:0;padding:0;overflow: hidden;background-color: black;}
     .city{width:100%;position:fixed;bottom: 0px;z-index: 100;}
     .city img{width: 100%;}
   </style>
@@ -11,7 +11,7 @@
 </head>
 <body onselectstart = "return false">
 
-<div style="height:700px;overflow:hidden;">
+<div >
 
   <canvas id='cas' style="background-color:rgba(0,5,24,1);">浏览器不支持canvas</canvas>
   <div class="city"></div>
@@ -32,7 +32,7 @@
     var octx = ocas.getContext("2d");
     var ctx = canvas.getContext("2d");
     ocas.width = canvas.width = window.innerWidth;
-    ocas.height = canvas.height = 700;
+    ocas.height = canvas.height = 850;
     var bigbooms = [];
   
     window.onload = function(){
