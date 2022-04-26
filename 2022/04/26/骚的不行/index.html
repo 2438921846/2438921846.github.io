@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta name="author" content="ShaoZeMing,szm19920426@gmail.com beijing">
+
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--嘿嘿，禁止缩放-->
+    <!-- <link rel="apple-touch-icon-precomposed" href="./public/1.png"> -->
+    <meta name="format-detection" content="telephone=no">
+    <title>我喜欢你</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            font-size: 25px;
+            color: #FFF;
+            font-family: "微软雅黑";
+            background: #f3961c;
+        }
+        div {
+            text-align: left;
+        }
+        .tittle {
+            width: 100%;
+            background: #f3961c;
+            top: 0px;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            position: fixed !important;
+            display: none;
+            cursor: default;
+        }
+
+        .big {
+            font-family: "微软雅黑";
+            color: #FFF;
+            font-size: 35px;
+        }
+        .tishi {
+            position: absolute;
+            position: fixed !important;
+            z-index: 99;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .tishiContent {
+            border: 1px solid #FFF;
+            font-size: 18px;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="./jscss/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $(document).scrollTop(300);
+            /*移动滚动条到最下方*/
+            timer = setInterval("$.change()", 3000);
+            t = 2;
+            $("#t-" + t).fadeIn();
+            $(document).click(
+                    function () {
+                        /*如果用户点击了，就取消自动播放*/
+                        clearInterval(timer);
+                        $.change();
+                    }
+            );
+
+            /*切换*/
+            $.change = function () {
+                t++;
+                if (t <= $(".tittle").length) {
+                    $(".tittle").slideUp(1500).fadeOut();
+                    $("#t-" + t).slideDown(1500).fadeIn();
+                } else {
+                    localStorage["index"] = "1";
+                    window.location = "index2.html";
+                }
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<section style="text-align: center">
+    <div class="tittle" id="t-1" style="display: none;">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><span class="big">日记系统</span>正在初始化</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-2" style="display: block;">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><span class="big">杰宝</span>啊</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-3" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center">嘿！<span class="big">你在搞什么飞机✈🦆</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+   <div class="tittle" id="t-4" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center">其实<span class="big">从专业的角度而言这并不难</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="tittle" id="t-5" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>
+                    <span class="big">能让你觉得些许新奇也就能达到目的</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-6" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>目之所及<span class="big">有你😜😜</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tittle" id="t-7" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>却不及<span class="big">君之万一</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tittle" id="t-8" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>不及<span class="big">万一......</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tittle" id="t-9" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>溜啦溜啦<span class="big">diudiuduiduid啊🐱‍🏍🐱‍🏍🐱‍🏍🐱‍🏍🐱‍🏍</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<div align="center" class="tishi">
+    <span class="tishiContent">That's all 轻触屏幕继续</span>
+</div>
+</body>
+</html>
